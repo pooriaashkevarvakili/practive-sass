@@ -1,0 +1,29 @@
+@each $key, $val in $colors {
+  .test-#{$key} {
+    color: $val;
+  }
+  .bg-#{key} {
+    background-color: $val;
+  }
+  @for $i from 1 through 9 {
+    .test-#{$key}-dark -#{$i} {
+      background-color: mix(#000, $val, $i * 10);
+    }
+  }
+  @if ($val i !=#000 and $val !=#fff) {
+    @for $i from 1 through 9 {
+      .test-#{$key}-dark -#{$i} {
+        background-color: mix(#000, $val, $i * 10);
+      }
+    }
+  }
+}
+@if (10>5) {
+  .test-if {
+    color: #000;
+  }
+} @else {
+  .test-if-2 {
+    color: #fff;
+  }
+}
